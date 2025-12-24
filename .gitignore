@@ -1,0 +1,46 @@
+# Secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.classpath
+.project
+.settings/
+
+# Build outputs
+**/target/
+**/bin/
+**/obj/
+**/out/
+**/build/
+**/dist/
+*.jar
+*.war
+*.ear
+
+# Logs and temp files
+*.log
+**/logs/
+*.tmp
+*.swp
+*.bak
+
+# Node (if any tooling is added under BE)
+node_modules/
+**/node_modules/
+
+# Docker
+docker-compose.override.yml

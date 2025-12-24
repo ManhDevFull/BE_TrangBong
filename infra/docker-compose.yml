@@ -1,0 +1,63 @@
+﻿name: trangbong
+services:
+  api-gateway:
+    build:
+      context: ../services/api-gateway
+    ports:
+      - 8080:8080
+  identity-service:
+    build:
+      context: ../services/identity-service
+    ports:
+      - 8081:8080
+  customer-service:
+    build:
+      context: ../services/customer-service
+    ports:
+      - 8082:8080
+  artist-service:
+    build:
+      context: ../services/artist-service
+    ports:
+      - 8083:8080
+  catalog-service:
+    build:
+      context: ../services/catalog-service
+    ports:
+      - 8084:8080
+  scheduling-service:
+    build:
+      context: ../services/scheduling-service
+    ports:
+      - 8085:8080
+  booking-service:
+    build:
+      context: ../services/booking-service
+    ports:
+      - 8086:8080
+  payment-service:
+    build:
+      context: ../services/payment-service
+    ports:
+      - 8087:8080
+  notification-service:
+    build:
+      context: ../services/notification-service
+    ports:
+      - 8088:8080
+  fengshui-service:
+    build:
+      context: ../services/fengshui-service
+    ports:
+      - 8089:8080
+  consultation-service:
+    build:
+      context: ../services/consultation-service
+    ports:
+      - 8090:8080
+  analytics-service:
+    build:
+      context: ../services/analytics-service
+    ports:
+      - 8091:8080
+
