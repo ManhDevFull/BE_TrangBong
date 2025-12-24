@@ -6,30 +6,23 @@ This backend workspace contains service skeletons and a Docker Compose setup to 
 
 From the BE directory:
 
-`ash
+```bash
 cd BE
 docker compose -f infra/docker-compose.yml up --build
-`
+```
 
 Stop services:
 
-`ash
+```bash
 docker compose -f infra/docker-compose.yml down
-`
+```
 
-## Ports
+## Access
 
-- api-gateway: http://localhost:8080
-- identity-service: http://localhost:8081
-- customer-service: http://localhost:8082
-- artist-service: http://localhost:8083
-- catalog-service: http://localhost:8084
-- scheduling-service: http://localhost:8085
-- booking-service: http://localhost:8086
-- payment-service: http://localhost:8087
-- notification-service: http://localhost:8088
-- fengshui-service: http://localhost:8089
-- consultation-service: http://localhost:8090
-- analytics-service: http://localhost:8091
+- Public (host): api-gateway at http://localhost:8080
+- Internal HTTP: all services on port 8080 inside the Docker network
+- Internal gRPC: all services on port 9090 inside the Docker network
 
-Each service responds at / and /health.
+Only the gateway is published to the host. Other services are internal-only.
+
+Each service responds at HTTP `/` and `/health` and exposes gRPC `Health.Check`.

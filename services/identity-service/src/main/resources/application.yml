@@ -1,3 +1,6 @@
 ﻿spring:
   application:
     name: identity-service
+grpc:
+  server:
+    port: 9090
